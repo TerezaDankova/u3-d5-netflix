@@ -1,5 +1,5 @@
 import { Component } from "react";
-import {Image, Row, Col} from "react-bootstrap"
+import {Image,} from "react-bootstrap"
 
 class Gallery extends Component {
       state = {    
@@ -32,7 +32,6 @@ class Gallery extends Component {
       render() {
             return (
                   <div>
-                        {this.props.keyword}
                         <div>
                               {this.state.isLoading && (
                                     <div>Loading</div>
@@ -40,9 +39,9 @@ class Gallery extends Component {
                               {this.state.isError && (
                                     <div>Error</div>
                               )}
-                              {this.state.movies.map(movie => (
-                               <Image className="img-fluid pad" style={{width: "280px", height: "150px" }}src={movie.Poster} fluid />
-                              ))}
+                               {this.state.movies.map((movie,index) => (
+                               <Image key={index} className="img-fluid pad" style={{width: "280px", height: "150px" }}src={movie.Poster} fluid />
+                              ))} 
                         </div>
                   </div>
             )

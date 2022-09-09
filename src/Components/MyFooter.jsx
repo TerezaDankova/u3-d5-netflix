@@ -1,5 +1,4 @@
 import { Component } from "react";
-import {Card, Row, Col  } from "react-bootstrap"
 import * as Icon from 'react-bootstrap-icons';
 
 class MyFooter extends Component {
@@ -18,7 +17,7 @@ class MyFooter extends Component {
                         </div>
                   
                         <div className="d-flex justify-content-between mt-2" style={{fontSize: "10px"}}>
-                              <div class="">
+                              <div>
                               <ul className="text-left" style={{listStyle:"none"}}>
                                     <li>Audio and Subtitles</li>
                                     <li>Media Center</li>
